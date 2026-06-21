@@ -180,6 +180,16 @@ h3 {
   object-fit: cover;
 }
 
+.media-credit,
+.project-media figcaption,
+.project-gallery figcaption {
+  margin: 0;
+  padding: 8px 10px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
 .section-grid,
 .cv-section,
 .projects,
@@ -285,6 +295,42 @@ li + li {
   font-size: clamp(2rem, 3vw, 3rem);
 }
 
+.project-media {
+  margin: 20px -24px 0;
+  border-top: 2px solid var(--line);
+  border-bottom: 2px solid var(--line);
+}
+
+.project-media img,
+.project-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.project-media + h3 {
+  margin-top: 24px;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 28px;
+}
+
+.project-gallery figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1.5px solid var(--line);
+  background: var(--paper);
+}
+
+.projects > .project + .project {
+  margin-top: 18px;
+}
+
 .project > p:last-of-type {
   color: var(--muted);
 }
@@ -364,6 +410,7 @@ li + li {
   .hero,
   .section-grid,
   .project-list,
+  .project-gallery,
   .links-grid {
     grid-template-columns: 1fr;
   }
