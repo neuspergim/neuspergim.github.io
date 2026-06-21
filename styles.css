@@ -285,8 +285,19 @@ li + li {
   font-size: clamp(2rem, 3vw, 3rem);
 }
 
-.project p:last-child {
+.project > p:last-of-type {
   color: var(--muted);
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-top: 18px;
+}
+
+.project-links .text-link {
+  overflow-wrap: anywhere;
 }
 
 .links-grid {
